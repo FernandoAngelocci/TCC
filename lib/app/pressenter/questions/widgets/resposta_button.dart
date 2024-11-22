@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:tcc/config/const_colors.dart';
-import 'package:tcc/config/const_text.dart';
+import 'package:tcc/app/config/const_colors.dart';
+import 'package:tcc/app/config/const_text.dart';
 
-class ButtonHome extends StatelessWidget {
-  const ButtonHome({super.key, this.onTap});
+class RespostaButton extends StatelessWidget {
+  const RespostaButton({super.key});
 
-  final Function()? onTap;
   @override
   Widget build(BuildContext context) {
+    final width = MediaQuery.of(context).size.width;
     return GestureDetector(
-      onTap: onTap,
       child: Container(
-        width: 130,
+        padding: const EdgeInsets.only(left: 8),
+        width: width * 0.8,
         height: 35,
         decoration: BoxDecoration(
           color: ConstColors.buttonColor,
@@ -21,15 +21,14 @@ class ButtonHome extends StatelessWidget {
               color: Colors.grey.withOpacity(0.5),
               spreadRadius: 1,
               blurRadius: 0,
-              offset: Offset(3, 3),
+              offset: const Offset(3, 3),
             ),
           ],
         ),
-        child: Center(
-          child: Text(
-            'START',
-            style: ConstText.styleButton,
-          ),
+        child: Text(
+          'A: START',
+          textAlign: TextAlign.left,
+          style: ConstText.styleButton,
         ),
       ),
     );

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:tcc/config/const_colors.dart';
-import 'package:tcc/pressenter/questions/widgets/resposta_button.dart';
+import 'package:tcc/app/config/const_colors.dart';
+import 'package:tcc/app/pressenter/questions/widgets/resposta_button.dart';
 
 class QuestionPage extends StatelessWidget {
   const QuestionPage({super.key});

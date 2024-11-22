@@ -1,0 +1,1 @@
+{"database":{"rules":"database.rules.json"},"flutter":{"platforms":{"android":{"default":{"projectId":"quizapp-d134d","appId":"1:464201362878:android:0188c88c9b06af19ce9def","fileOutput":"android/app/google-services.json"}},"dart":{"lib/firebase_options.dart":{"projectId":"quizapp-d134d","configurations":{"android":"1:464201362878:android:0188c88c9b06af19ce9def"}}}}}}
