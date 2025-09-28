@@ -21,6 +21,7 @@ class _GameOverPageState extends State<GameOverPage> {
 
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
     return Scaffold(
       backgroundColor: ConstColors.primaryColor,
       body: SafeArea(
@@ -33,29 +34,32 @@ class _GameOverPageState extends State<GameOverPage> {
                       image: AssetImage("assets/background.png"),
                       fit: BoxFit.fitHeight)),
             ),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment:  MainAxisAlignment.center,
-              children: [
-                Text(
-                  "Quizzeduca",
-                  style: ConstText.title,
-                ),
-                Text(
-                  "GAME-OVER",
-                  style: ConstText.gameOver,
-                ),
-                ButtonHome(
-                  text:  'NEW GAME',
-                  onTap: (){
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const HomePage()),
-                    );
-                  },
-                )
-              ],
+            SizedBox(
+              width: width,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    "Quizzeduca",
+                    style: ConstText.title,
+                  ),
+                  Text(
+                    "GAME-OVER",
+                    style: ConstText.gameOver,
+                  ),
+                  ButtonHome(
+                    text: 'NEW GAME',
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const HomePage()),
+                      );
+                    },
+                  )
+                ],
+              ),
             ),
           ],
         )),
