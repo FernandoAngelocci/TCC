@@ -1,7 +1,15 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 part of 'questions_cubit.dart';
 
-enum QuestionStatus { initial, startGame, startNewRound, completed, error, loading }
+enum QuestionStatus {
+  initial,
+  startGame,
+  startNewRound,
+  gameOver,
+  completed,
+  error,
+  loading
+}
 
 class QuestionState extends Equatable {
   final QuestionStatus status;
@@ -57,8 +65,15 @@ class QuestionState extends Equatable {
   }
 
   @override
-  List<Object> get props =>
-      [status, error, questions ?? [], score ?? 0, currentRound, remainQuestions ?? [], currentQuestion ?? 'No Question'];
+  List<Object> get props => [
+        status,
+        error,
+        questions ?? [],
+        score ?? 0,
+        currentRound,
+        remainQuestions ?? [],
+        currentQuestion ?? 'No Question'
+      ];
 
   @override
   bool get stringify => true;

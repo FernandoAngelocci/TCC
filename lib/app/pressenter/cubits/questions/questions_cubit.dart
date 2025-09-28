@@ -1,15 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:firebase_database/firebase_database.dart';
-import 'package:tcc/app/domain/errors/errors.dart';
-import 'package:tcc/app/domain/external/firebase/login_data_mock.dart';
-import 'package:tcc/app/domain/external/firebase/question_firebase.dart';
 import 'package:tcc/app/infra/model/question_model.dart';
-import 'package:tcc/app/infra/model/user_model.dart';
-import 'package:tcc/app/infra/repositories/categorie_repositories_impl.dart';
-import 'package:tcc/app/infra/repositories/questions_repositories_impl.dart';
-import 'package:tcc/app/usescases/categorie/get_categories.dart';
-import 'package:tcc/app/usescases/question/get_questions.dart';
 
 part 'questions_state.dart';
 
@@ -34,16 +26,25 @@ class QuestionsCubit extends Cubit<QuestionState> {
     starNewRound();
   }
 
+  gameOver() {
+    emit(state.copyWith(
+      status: QuestionStatus.gameOver,
+      error: '',
+    ));
+  }
+
   starNewRound() {
-    var currentQuestion = state.remainQuestions?.first;
-    state.remainQuestions?.removeWhere((question) => question.question == currentQuestion?.question);
-    emit(
-      QuestionState(
-          status: QuestionStatus.startNewRound,
-          error: '',
-          currentRound: state.currentRound + 1,
-          currentQuestion: currentQuestion,
-      ),
-    );
+    var currentQuestion = state.remainQuestions?.firstOrNull;
+    if (currentQuestion == null) {
+      gameOver();
+    }
+    state.remainQuestions?.removeWhere(
+        (question) => question.question == currentQuestion?.question);
+    emit(state.copyWith(
+      status: QuestionStatus.startNewRound,
+      error: '',
+      currentRound: state.currentRound + 1,
+      currentQuestion: currentQuestion,
+    ));
   }
 }

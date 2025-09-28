@@ -7,5 +7,7 @@ class ConstColors {
 
   static Color buttonTextColor = Colors.black;
 
-  static Color backgroundColor= Colors.black;
+  static Color backgroundColor = Colors.black;
+
+  static Color GameOverTextColor = Colors.red;
 }

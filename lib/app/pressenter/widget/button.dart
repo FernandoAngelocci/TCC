@@ -3,9 +3,10 @@ import 'package:tcc/app/config/const_colors.dart';
 import 'package:tcc/app/config/const_text.dart';
 
 class ButtonHome extends StatelessWidget {
-  const ButtonHome({super.key, this.onTap});
+  const ButtonHome({super.key, this.onTap, this.text = ''});
 
   final Function()? onTap;
+  final String text;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -27,7 +28,7 @@ class ButtonHome extends StatelessWidget {
         ),
         child: Center(
           child: Text(
-            'START',
+            text,
             style: ConstText.styleButton,
           ),
         ),

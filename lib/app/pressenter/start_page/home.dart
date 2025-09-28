@@ -98,26 +98,30 @@ class _HomePageState extends State<HomePage> {
               }),
               Padding(
                 padding: const EdgeInsets.only(bottom: 80.0),
-                child: Center(child: ButtonHome(
-                  onTap: () {
-                    context.read<QuestionsCubit>().startNewGame(context
-                        .read<HomeCubit>()
-                        .state
-                        .questions
-                        .where((question) => context
-                            .read<HomeCubit>()
-                            .state
-                            .selectedCategories
-                            .where((category) =>
-                                category.id == question.categoryID).isNotEmpty)
-                        .toList());
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const QuestionPage()),
-                    );
-                  },
-                )),
+                child: Center(
+                  child: ButtonHome(
+                    text: 'START',
+                    onTap: () {
+                      context.read<QuestionsCubit>().startNewGame(context
+                          .read<HomeCubit>()
+                          .state
+                          .questions
+                          .where((question) => context
+                              .read<HomeCubit>()
+                              .state
+                              .selectedCategories
+                              .where((category) =>
+                                  category.id == question.categoryID)
+                              .isNotEmpty)
+                          .toList());
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const QuestionPage()),
+                      );
+                    },
+                  ),
+                ),
               ),
             ],
           ),
