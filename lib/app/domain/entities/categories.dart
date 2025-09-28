@@ -1,11 +1,11 @@
-class Categorie {
+class Categories {
   final int id;
   final String description;
   final String name;
 
-  Categorie({
+  Categories({
     required this.id,
     required this.description,
-    required this.name
+    required this.name,
   });
 }

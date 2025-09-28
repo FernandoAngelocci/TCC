@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tcc/app/config/const_colors.dart';
 import 'package:tcc/app/pressenter/cubits/home_cubit/home_cubit.dart';
+import 'package:tcc/app/pressenter/cubits/questions/questions_cubit.dart';
 import 'package:tcc/app/pressenter/start_page/home.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
@@ -27,6 +28,9 @@ class MyApp extends StatelessWidget {
               providers: [
                 BlocProvider<HomeCubit>(
                   create: (context) => HomeCubit(),
+                ),
+                BlocProvider<QuestionsCubit>(
+                  create: (context) => QuestionsCubit(),
                 ),
               ],
               child: MaterialApp(

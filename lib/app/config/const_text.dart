@@ -6,6 +6,13 @@ class ConstText {
   static TextStyle styleButton = GoogleFonts.modak(
     fontSize: 25,
     color: ConstColors.buttonTextColor,
+    fontWeight: FontWeight.normal,
+  );
+
+  static TextStyle question = GoogleFonts.modak(
+    fontSize: 40,
+    color: ConstColors.buttonColor,
+    fontWeight: FontWeight.normal,
   );
 
   static TextStyle title = GoogleFonts.modak(
@@ -19,4 +26,11 @@ class ConstText {
     fontWeight: FontWeight.normal,
     color: ConstColors.buttonColor,
   );
+
+  static TextStyle timer = GoogleFonts.modak(
+    fontSize: 50,
+    fontWeight: FontWeight.normal,
+    color: ConstColors.buttonColor,
+  );
+
 }

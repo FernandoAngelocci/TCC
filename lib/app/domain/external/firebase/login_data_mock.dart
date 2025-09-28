@@ -10,12 +10,12 @@ class CategorieFirebase implements CategorieDataSource {
   CategorieFirebase({required this.firebase});
 
   @override
-  Future<List<CategorieModel>> getCategorie(ParamsGetCategorie params) async {
+  Future<List<CategoriesModel>> getCategorie(ParamsGetCategories params) async {
     try {
        final snapshot = await firebase.child('categories').get();
     if (snapshot.exists) {
         return (snapshot.value as List)
-            .map((category) => CategorieModel.fromJson(Map<String, dynamic>.from(category)))
+            .map((category) => CategoriesModel.fromJson(Map<String, dynamic>.from(category)))
             .toList();
     } else {
       throw CategorieException(message: "Vazio");

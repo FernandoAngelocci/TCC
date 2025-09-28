@@ -1,7 +1,7 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:tcc/app/domain/entities/categories.dart';
 
-class CategorieModel implements Categorie {
+class CategoriesModel implements Categories {
   @override
   String description;
 
@@ -11,13 +11,13 @@ class CategorieModel implements Categorie {
   @override
   String name;
 
-  CategorieModel({
+  CategoriesModel({
     required this.id,
     required this.name,
     required this.description,
   });
 
-  CategorieModel.fromJson(Map<String, dynamic> json)
+  CategoriesModel.fromJson(Map<String, dynamic> json)
       : name = json['name'] as String,
         id = (json['id'] as int?) ?? 0,
         description  = json['description'] as String;

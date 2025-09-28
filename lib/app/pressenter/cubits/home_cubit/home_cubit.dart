@@ -17,23 +17,19 @@ class HomeCubit extends Cubit<HomeState> {
 
   final ref = FirebaseDatabase.instance.ref();
 
-  void startNewGame(){
-    
-  }
+  void selectCategories(CategoriesModel categories) {
+    List<CategoriesModel> newCategories = [];
+    newCategories.addAll(state.selectedCategories);
 
-  void selectCategories(CategorieModel categorie) {
-    List<CategorieModel> newCategorie = [];
-    newCategorie.addAll(state.selectedCategories);
-
-    if (newCategorie.contains(categorie)) {
-      newCategorie.remove(categorie);
+    if (newCategories.contains(categories)) {
+      newCategories.remove(categories);
     } else {
-      newCategorie.add(categorie);
+      newCategories.add(categories);
     }
 
     emit(state.copyWith(
       status: HomeStatus.completed,
-      selectedCategories: newCategorie,
+      selectedCategories: newCategories,
     ));
   }
 
@@ -45,7 +41,7 @@ class HomeCubit extends Cubit<HomeState> {
             repository: CategorieRepositoryImpl(
                 datasource: CategorieFirebase(firebase: ref)))
         .call(
-      ParamsGetCategorie(),
+      ParamsGetCategories(),
     );
 
     result.fold(
@@ -54,7 +50,7 @@ class HomeCubit extends Cubit<HomeState> {
                 status: HomeStatus.error,
               ))
             },
-        (List<CategorieModel> categories) => {
+        (List<CategoriesModel> categories) => {
               emit(state.copyWith(
                 status: HomeStatus.completed,
                 categories: categories,

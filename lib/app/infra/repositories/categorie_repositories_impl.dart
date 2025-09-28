@@ -12,7 +12,7 @@ class CategorieRepositoryImpl implements CategorieRepository {
   });
 
   @override
-  Future<Either<CategorieException, List<CategorieModel>>> getCategories(ParamsGetCategorie params) async {
+  Future<Either<CategorieException, List<CategoriesModel>>> getCategories(ParamsGetCategories params) async {
     try {
       final categorie = await datasource.getCategorie(params);
       return Right(categorie);

@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:tcc/app/config/const_colors.dart';
 import 'package:tcc/app/config/const_text.dart';
 import 'package:tcc/app/pressenter/cubits/home_cubit/home_cubit.dart';
+import 'package:tcc/app/pressenter/cubits/questions/questions_cubit.dart';
 import 'package:tcc/app/pressenter/questions/question_page.dart';
 import 'package:tcc/app/pressenter/widget/button.dart';
 
@@ -79,7 +80,7 @@ class _HomePageState extends State<HomePage> {
                                   color: state.selectedCategories
                                           .contains(state.categories[index])
                                       ? Colors.black
-                                      : Colors.white ,
+                                      : Colors.white,
                                   spreadRadius: 1,
                                   blurRadius: 0,
                                   offset: const Offset(4, 4),
@@ -99,6 +100,17 @@ class _HomePageState extends State<HomePage> {
                 padding: const EdgeInsets.only(bottom: 80.0),
                 child: Center(child: ButtonHome(
                   onTap: () {
+                    context.read<QuestionsCubit>().startNewGame(context
+                        .read<HomeCubit>()
+                        .state
+                        .questions
+                        .where((question) => context
+                            .read<HomeCubit>()
+                            .state
+                            .selectedCategories
+                            .where((category) =>
+                                category.id == question.categoryID).isNotEmpty)
+                        .toList());
                     Navigator.push(
                       context,
                       MaterialPageRoute(

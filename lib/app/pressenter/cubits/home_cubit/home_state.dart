@@ -6,9 +6,9 @@ enum HomeStatus { initial, completed, error, loading }
 class HomeState extends Equatable {
   final HomeStatus status;
   final String error;
-  final List<CategorieModel> categories;
+  final List<CategoriesModel> categories;
   final List<QuestionModel> questions;
-  final List<CategorieModel> selectedCategories;
+  final List<CategoriesModel> selectedCategories;
 
   const HomeState({
     required this.status,
@@ -31,8 +31,8 @@ class HomeState extends Equatable {
   HomeState copyWith({
     HomeStatus? status,
     String? error,
-    List<CategorieModel>? categories,
-    List<CategorieModel>? selectedCategories,
+    List<CategoriesModel>? categories,
+    List<CategoriesModel>? selectedCategories,
     List<QuestionModel>? questions
   }) {
     return HomeState(

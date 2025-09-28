@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:tcc/app/config/const_colors.dart';
 import 'package:tcc/app/config/const_text.dart';
 
-class RespostaButton extends StatelessWidget {
-  const RespostaButton({super.key});
-
+class AnswerButton extends StatelessWidget {
+  const AnswerButton({super.key, required this.question, required this.answer});
+  final String question;
+  final Function answer;
   @override
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
@@ -26,7 +27,7 @@ class RespostaButton extends StatelessWidget {
           ],
         ),
         child: Text(
-          'A: START',
+          question,
           textAlign: TextAlign.left,
           style: ConstText.styleButton,
         ),

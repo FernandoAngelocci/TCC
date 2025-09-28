@@ -4,5 +4,5 @@ import 'package:tcc/app/infra/model/user_model.dart';
 import 'package:tcc/app/usescases/categorie/get_categories.dart';
 
 abstract class CategorieRepository {
-  Future<Either<CategorieException, List<CategorieModel>>> getCategories(ParamsGetCategorie params);
+  Future<Either<CategorieException, List<CategoriesModel>>> getCategories(ParamsGetCategories params);
 }
