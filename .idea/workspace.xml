@@ -4,45 +4,15 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="03e33d4e-e5fd-45e4-a629-bc05bf8c922f" name="Changes" comment="Refactor: Implement question logic and UI&#10;&#10;This commit introduces the following changes:&#10;&#10;- Implemented the logic for handling questions, including starting new games and rounds.&#10;- Created a new `QuestionsCubit` to manage the state of questions.&#10;- Updated the UI for the question page, including a timer and answer buttons.&#10;- Refactored existing code to accommodate the new question logic.&#10;- Removed unused Android Gradle files.&#10;- Updated Gradle properties and dependencies.&#10;- Renamed `Categorie` to `Categories` for consistency.&#10;- Added new text styles for questions and timers.">
-      <change afterPath="$PROJECT_DIR$/lib/app/pressenter/cubits/questions/questions_cubit.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/app/pressenter/cubits/questions/questions_state.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
+    <list default="true" id="03e33d4e-e5fd-45e4-a629-bc05bf8c922f" name="Changes" comment="Refactor: Improve GameOverPage layout&#10;&#10;This commit introduces the following changes:&#10;- Wrapped the `Column` widget in `GameOverPage` with a `SizedBox` to constrain its width to the screen width.&#10;- This ensures that the content within the `Column` is centered correctly on the screen.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/google-services.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/kotlin/com/example/tcc/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/kotlin/com/example/tcc/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/android/gradle.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/android/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/app/config/const_colors.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/config/const_colors.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/app/config/const_text.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/config/const_text.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/app/domain/entities/categories.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/domain/entities/categories.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/app/domain/errors/errors.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/domain/errors/errors.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/app/domain/external/firebase/login_data_mock.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/domain/external/firebase/login_data_mock.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/app/domain/external/firebase/question_firebase.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/domain/external/firebase/question_firebase.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/app/domain/repository/categorie_repository.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/domain/repository/categorie_repository.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/app/infra/datasource/user_datasource.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/infra/datasource/user_datasource.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/app/infra/model/user_model.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/infra/model/user_model.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/app/infra/repositories/categorie_repositories_impl.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/infra/repositories/categorie_repositories_impl.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/app/pressenter/cubits/home_cubit/home_cubit.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/pressenter/cubits/home_cubit/home_cubit.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/app/pressenter/cubits/home_cubit/home_state.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/pressenter/cubits/home_cubit/home_state.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/app/pressenter/cubits/questions/questions_cubit.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/pressenter/cubits/questions/questions_cubit.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/app/pressenter/cubits/questions/questions_state.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/pressenter/cubits/questions/questions_state.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/app/pressenter/game_over/game_over.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/pressenter/game_over/game_over.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/app/pressenter/questions/question_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/pressenter/questions/question_page.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/app/pressenter/questions/widgets/resposta_button.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/pressenter/questions/widgets/resposta_button.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/app/pressenter/start_page/home.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/pressenter/start_page/home.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/app/usescases/categorie/get_categories.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/usescases/categorie/get_categories.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/linux/flutter/generated_plugin_registrant.cc" beforeDir="false" afterPath="$PROJECT_DIR$/linux/flutter/generated_plugin_registrant.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/linux/flutter/generated_plugin_registrant.h" beforeDir="false" afterPath="$PROJECT_DIR$/linux/flutter/generated_plugin_registrant.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/linux/flutter/generated_plugins.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/linux/flutter/generated_plugins.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/macos/Flutter/GeneratedPluginRegistrant.swift" beforeDir="false" afterPath="$PROJECT_DIR$/macos/Flutter/GeneratedPluginRegistrant.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tcc.iml" beforeDir="false" afterPath="$PROJECT_DIR$/tcc.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/windows/flutter/generated_plugin_registrant.cc" beforeDir="false" afterPath="$PROJECT_DIR$/windows/flutter/generated_plugin_registrant.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/windows/flutter/generated_plugin_registrant.h" beforeDir="false" afterPath="$PROJECT_DIR$/windows/flutter/generated_plugin_registrant.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/windows/flutter/generated_plugins.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/windows/flutter/generated_plugins.cmake" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,9 +35,28 @@
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Dart File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Brunfzks"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/FernandoAngelocci/TCC.git",
+    "accountId": "356f4d85-50f8-4252-b1a4-06d7cc516aac"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>
@@ -84,32 +73,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DEBUGGABLE_DEVICE&quot;: &quot;Medium_Phone_API_36 [emulator-5554]&quot;,
-    &quot;DEBUGGABLE_PROCESS&quot;: &quot;com.example.tcc&quot;,
-    &quot;DEBUGGER_ID&quot;: &quot;Java&quot;,
-    &quot;Flutter.main.dart.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
-    &quot;SHOW_ALL_PROCESSES&quot;: &quot;true&quot;,
-    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;com.google.services.firebase.aqiPopupShown&quot;: &quot;true&quot;,
-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;io.flutter.reload.alreadyRun&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/Git/TCC/lib/app/pressenter/cubits/home_cubit/questions&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.17&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DEBUGGABLE_DEVICE": "Medium_Phone_API_36 [emulator-5554]",
+    "DEBUGGABLE_PROCESS": "com.example.tcc",
+    "DEBUGGER_ID": "Java",
+    "Flutter.main.dart.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "SHOW_ALL_PROCESSES": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "com.google.services.firebase.aqiPopupShown": "true",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "main",
+    "io.flutter.reload.alreadyRun": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "E:/Git/TCC/lib/app/pressenter/cubits/home_cubit/questions",
+    "project.structure.last.edited": "Facets",
+    "project.structure.proportion": "0.17",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "vcs.Git",
+    "show.migrate.to.gradle.popup": "false"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\Git\TCC\lib\app\pressenter\cubits\home_cubit\questions" />
@@ -128,6 +117,31 @@
       <option name="presentableId" value="Default" />
       <updated>1743950342095</updated>
     </task>
+    <task id="LOCAL-00001" summary="Refactor: Implement question logic and UI&#10;&#10;This commit introduces the following changes:&#10;&#10;- Implemented the logic for handling questions, including starting new games and rounds.&#10;- Created a new `QuestionsCubit` to manage the state of questions.&#10;- Updated the UI for the question page, including a timer and answer buttons.&#10;- Refactored existing code to accommodate the new question logic.&#10;- Removed unused Android Gradle files.&#10;- Updated Gradle properties and dependencies.&#10;- Renamed `Categorie` to `Categories` for consistency.&#10;- Added new text styles for questions and timers.">
+      <option name="closed" value="true" />
+      <created>1759079339638</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1759079339638</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Feat: Implement game over screen and logic&#10;&#10;This commit introduces the following changes:&#10;- Created a new `GameOverPage` to display the game over screen.&#10;- Added logic to handle the game over state in `QuestionsCubit` and `QuestionPage`.&#10;- Updated `ButtonHome` to accept a `text` parameter for dynamic button labels.&#10;- Added a new `GameOverTextColor` constant.&#10;- Added a new `gameOver` text style.">
+      <option name="closed" value="true" />
+      <created>1759081613164</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1759081613164</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Refactor: Improve GameOverPage layout&#10;&#10;This commit introduces the following changes:&#10;- Wrapped the `Column` widget in `GameOverPage` with a `SizedBox` to constrain its width to the screen width.&#10;- This ensures that the content within the `Column` is centered correctly on the screen.">
+      <option name="closed" value="true" />
+      <created>1759085971736</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1759085971736</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -138,15 +152,32 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Refactor: Implement question logic and UI&#10;&#10;This commit introduces the following changes:&#10;&#10;- Implemented the logic for handling questions, including starting new games and rounds.&#10;- Created a new `QuestionsCubit` to manage the state of questions.&#10;- Updated the UI for the question page, including a timer and answer buttons.&#10;- Refactored existing code to accommodate the new question logic.&#10;- Removed unused Android Gradle files.&#10;- Updated Gradle properties and dependencies.&#10;- Renamed `Categorie` to `Categories` for consistency.&#10;- Added new text styles for questions and timers." />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor: Implement question logic and UI&#10;&#10;This commit introduces the following changes:&#10;&#10;- Implemented the logic for handling questions, including starting new games and rounds.&#10;- Created a new `QuestionsCubit` to manage the state of questions.&#10;- Updated the UI for the question page, including a timer and answer buttons.&#10;- Refactored existing code to accommodate the new question logic.&#10;- Removed unused Android Gradle files.&#10;- Updated Gradle properties and dependencies.&#10;- Renamed `Categorie` to `Categories` for consistency.&#10;- Added new text styles for questions and timers." />
+    <MESSAGE value="Feat: Implement game over screen and logic&#10;&#10;This commit introduces the following changes:&#10;- Created a new `GameOverPage` to display the game over screen.&#10;- Added logic to handle the game over state in `QuestionsCubit` and `QuestionPage`.&#10;- Updated `ButtonHome` to accept a `text` parameter for dynamic button labels.&#10;- Added a new `GameOverTextColor` constant.&#10;- Added a new `gameOver` text style." />
+    <MESSAGE value="Refactor: Improve GameOverPage layout&#10;&#10;This commit introduces the following changes:&#10;- Wrapped the `Column` widget in `GameOverPage` with a `SizedBox` to constrain its width to the screen width.&#10;- This ensures that the content within the `Column` is centered correctly on the screen." />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor: Improve GameOverPage layout&#10;&#10;This commit introduces the following changes:&#10;- Wrapped the `Column` widget in `GameOverPage` with a `SizedBox` to constrain its width to the screen width.&#10;- This ensures that the content within the `Column` is centered correctly on the screen." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/app/pressenter/cubits/questions/questions_cubit.dart</url>
-          <line>37</line>
-          <option name="timeStamp" value="1" />
+          <url>file://$PROJECT_DIR$/lib/app/pressenter/questions/question_page.dart</url>
+          <line>106</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/app/pressenter/questions/question_page.dart</url>
+          <line>118</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/app/pressenter/questions/question_page.dart</url>
+          <line>130</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/lib/app/pressenter/questions/question_page.dart</url>
+          <line>142</line>
+          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

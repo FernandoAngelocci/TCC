@@ -1,8 +1,10 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:tcc/app/config/const_colors.dart';
 import 'package:tcc/app/config/const_text.dart';
+import 'package:tcc/app/pressenter/cubits/questions/questions_cubit.dart';
 import 'package:tcc/app/pressenter/start_page/home.dart';
 import 'package:tcc/app/pressenter/widget/button.dart';
 
@@ -48,9 +50,14 @@ class _GameOverPageState extends State<GameOverPage> {
                     "GAME-OVER",
                     style: ConstText.gameOver,
                   ),
+                  Text(
+                   context.watch<QuestionsCubit>().state.score.toString(),
+                    style: ConstText.scoreTextStyle,
+                  ),
                   ButtonHome(
                     text: 'NEW GAME',
                     onTap: () {
+                      context.read<QuestionsCubit>().nextGame();
                       Navigator.push(
                         context,
                         MaterialPageRoute(

@@ -24,7 +24,13 @@ class ConstText {
   static TextStyle gameOver = GoogleFonts.modak(
     fontSize: 60,
     fontWeight: FontWeight.normal,
-    color: ConstColors.GameOverTextColor,
+    color: ConstColors.gameOverTextColor,
+  );
+
+  static TextStyle scoreTextStyle = GoogleFonts.modak(
+    fontSize: 60,
+    fontWeight: FontWeight.normal,
+    color: ConstColors.buttonColor,
   );
 
   static TextStyle categorieButton = GoogleFonts.modak(

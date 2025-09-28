@@ -26,11 +26,42 @@ class QuestionsCubit extends Cubit<QuestionState> {
     starNewRound();
   }
 
+  score() {
+    emit(
+      state.copyWith(
+        score: (state.score + 10),
+      ),
+    );
+    starNewRound();
+  }
+
   gameOver() {
     emit(state.copyWith(
       status: QuestionStatus.gameOver,
       error: '',
     ));
+  }
+
+  nextGame(){
+    emit(
+      state.copyWith(
+        status: QuestionStatus.initial,
+        error: '',
+        questions: [],
+        score: 0,
+        currentRound: 0,
+        remainQuestions: [],
+        currentQuestion: null
+      )
+    );
+  }
+
+  play(bool isCorrect) {
+    if (isCorrect) {
+      score();
+    } else {
+      starNewRound();
+    }
   }
 
   starNewRound() {

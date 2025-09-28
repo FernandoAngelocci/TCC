@@ -19,7 +19,7 @@ class QuestionPage extends StatefulWidget {
 class _QuestionPageState extends State<QuestionPage> {
   late final Timer _timer = Timer.periodic(
     const Duration(milliseconds: 1000),
-    (Timer timer) {
+        (Timer timer) {
       if (_start == 0) {
         setState(() {
           context.read<QuestionsCubit>().starNewRound();
@@ -54,11 +54,10 @@ class _QuestionPageState extends State<QuestionPage> {
         if (state.status == QuestionStatus.startNewRound) {
           startTimer();
         }
-        if(state.status == QuestionStatus.gameOver){
+        if (state.status == QuestionStatus.gameOver) {
           Navigator.push(
             context,
-            MaterialPageRoute(
-                builder: (context) => const GameOverPage()),
+            MaterialPageRoute(builder: (context) => const GameOverPage()),
           );
         }
       },
@@ -84,53 +83,70 @@ class _QuestionPageState extends State<QuestionPage> {
                     ),
                   ),
                   BlocBuilder<QuestionsCubit, QuestionState>(
-                    builder: (context, state) => SizedBox(
-                        height: 600,
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          children: [
-                            Expanded(
-                                child: Center(
-                              child: Text(
-                                state.currentQuestion?.question ?? "",
-                                style: ConstText.question,
-                                textAlign: TextAlign.center,
-                              ),
+                    builder: (context, state) =>
+                        SizedBox(
+                            height: 600,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: [
+                                Expanded(
+                                    child: Center(
+                                      child: Text(
+                                        state.currentQuestion?.question ?? "",
+                                        style: ConstText.question,
+                                        textAlign: TextAlign.center,
+                                      ),
+                                    )),
+                                Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: AnswerButton(
+                                    question:
+                                    'A: ${state.currentQuestion?.options[0]
+                                        .option.toUpperCase()}',
+                                    answer: () {
+                                      context.read<QuestionsCubit>().play(state.currentQuestion?.options[0]
+                                          .isCorrect ?? false);
+                                    },
+                                  ),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: AnswerButton(
+                                    question:
+                                    'B: ${state.currentQuestion?.options[1]
+                                        .option.toUpperCase()}',
+                                    answer: () {
+                                      context.read<QuestionsCubit>().play(state.currentQuestion?.options[1]
+                                          .isCorrect ?? false);
+                                    },
+                                  ),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: AnswerButton(
+                                    question:
+                                    'C: ${state.currentQuestion?.options[2]
+                                        .option.toUpperCase()}',
+                                    answer: () {
+                                      context.read<QuestionsCubit>().play(state.currentQuestion?.options[2]
+                                          .isCorrect ?? false);
+                                    },
+                                  ),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: AnswerButton(
+                                    question:
+                                    'D: ${state.currentQuestion?.options[3]
+                                        .option.toUpperCase()}',
+                                    answer: () {
+                                      context.read<QuestionsCubit>().play(state.currentQuestion?.options[3]
+                                          .isCorrect ?? false);
+                                    },
+                                  ),
+                                ),
+                              ],
                             )),
-                            Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: AnswerButton(
-                                question:
-                                    'A: ${state.currentQuestion?.options[0].option.toUpperCase()}',
-                                answer: () {},
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: AnswerButton(
-                                question:
-                                    'B: ${state.currentQuestion?.options[1].option.toUpperCase()}',
-                                answer: () {},
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: AnswerButton(
-                                question:
-                                    'C: ${state.currentQuestion?.options[2].option.toUpperCase()}',
-                                answer: () {},
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: AnswerButton(
-                                question:
-                                    'D: ${state.currentQuestion?.options[3].option.toUpperCase()}',
-                                answer: () {},
-                              ),
-                            ),
-                          ],
-                        )),
                   )
                 ],
               ),

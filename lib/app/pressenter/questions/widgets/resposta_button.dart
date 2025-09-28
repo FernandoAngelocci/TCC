@@ -5,11 +5,12 @@ import 'package:tcc/app/config/const_text.dart';
 class AnswerButton extends StatelessWidget {
   const AnswerButton({super.key, required this.question, required this.answer});
   final String question;
-  final Function answer;
+  final Function()? answer;
   @override
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
     return GestureDetector(
+      onTap: answer,
       child: Container(
         padding: const EdgeInsets.only(left: 8),
         width: width * 0.8,

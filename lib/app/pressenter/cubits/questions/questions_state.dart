@@ -16,7 +16,7 @@ class QuestionState extends Equatable {
   final String error;
   final List<QuestionModel>? questions;
   final List<QuestionModel>? remainQuestions;
-  final int? score;
+  final int score;
   final int currentRound;
   final QuestionModel? currentQuestion;
 
@@ -27,7 +27,7 @@ class QuestionState extends Equatable {
     required this.status,
     required this.error,
     this.questions,
-    this.score,
+    required this.score,
     required this.currentRound,
     this.remainQuestions,
     this.currentQuestion,

@@ -9,5 +9,7 @@ class ConstColors {
 
   static Color backgroundColor = Colors.black;
 
-  static Color GameOverTextColor = Colors.red;
+  static Color gameOverTextColor = Colors.red;
+
+  static Color scoreColor = Colors.green;
 }
